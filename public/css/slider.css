@@ -1,0 +1,120 @@
+.slider {
+  width:100%;
+}
+
+.slide {
+  width:33.33%;
+  height:auto;
+  float:left;
+  background: linear-gradient(135deg, rgba(0,0,0,0.4),
+  rgba(0,0,0,0.25));
+}
+
+img {
+  position: relative;
+  z-index:-1;
+}
+
+.slide-window {
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  position:relative;
+}
+
+.nav {
+	display:block;
+	position:absolute;
+	cursor:pointer;
+  top: calc(50% - 26px);
+}
+
+.arrow {
+  opacity: 0.5;
+}
+
+#rightNav {
+	right:20;
+  z-index: 1;
+}
+
+#leftNav {
+	left:20;
+  z-index: 1;
+}
+
+#internment-title {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%,-50%);
+  font-family: Verdana;
+  font-size: 50px;
+  color: white;
+}
+
+#internment-pp {
+  position: absolute;
+  left: 51%;
+  top: 40%;
+  transform: translate(-50%,-50%);
+  font-family: Verdana;
+  font-size: 20px;
+  color: white;
+}
+
+#tule-title {
+  position: absolute;
+  left:10%;
+  font-family: Verdana;
+  font-size: 100px;
+  color: #4e76f7;
+  display: none;
+}
+
+#tule-pp {
+  position: absolute;
+  left: 41%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-family: Verdana;
+  font-size: 20px;
+  color: white;
+}
+
+#lake-title {
+  position: absolute;
+  left:11.5%;
+  top: 20%;
+  font-family: Verdana;
+  font-size: 72px;
+  color: white;
+  display:none;
+}
+
+#heart-title {
+  position: absolute;
+  left:10%;
+  font-family: Verdana;
+  font-size: 100px;
+  color: #ff5134;
+  display: none;
+}
+
+#mountain-title {
+  position: absolute;
+  left:10.3%;
+  top: 20%;
+  font-family: Verdana;
+  font-size: 72px;
+  color: white;
+  display: none;
+}
+
+.slide-holder {
+  width:300%;
+  background-color: blue;
+  margin-left:0%;
+  transition: margin-left 1s;
+/*  this is the bit that needs to change to slide the slide*/
+}
