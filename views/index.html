@@ -10,26 +10,14 @@
     <script src="/static/js/slider.js"></script>
   </head>
   <body ng-controller="mainController">
-    <div class="slide-window">
-      <span class="nav" id="leftNav"><img class="arrow" width="40px" src="/static/images/white_left_arrow.png"></span>
-      <div class="slide-holder">
-        <div class="slide" id="slide1">
-          <h1 id="internment-title"> Life in the Internments</h1>
-          <img class="slider" src="/static/images/internment.png">
-        </div>
-        <div class="slide" id="slide2">
-            <h1 id="tule-title">TULE</h1>
-            <h1 id="lake-title">LAKE</h1>
-            <p id="tule-pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut justo in felis cursus consequat. Nulla vehicula tempus tortor. Duis justo nulla, consectetur vel varius at, ultrices sit amet metus. Phasellus in maximus risus, eget efficitur purus.</p>
-           <img class="slider" src="/static/images/Tule_Lake.jpg">
-        </div>
-          <div class="slide" id="slide2">
-            <h1 id="heart-title">HEART</h1>
-            <h1 id="mountain-title">MOUNTAIN</h1>
-            <img class="slider" src="/static/images/Heart_Mountain.png">
-        </div>
-      </div>
-      <span class="nav" id="rightNav"><img class="arrow" width="40px" src="/static/images/white_right_arrow.png"></span>
+    <nav>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Camps</a></li>
+        <li><a href="#">Stories</a></li>
+      </ul>
+    </nav>
+    <div ng-view>
     </div>
   </body>
 </html>
