@@ -1,39 +1,38 @@
-.slider {
+/*.slider {
   width:100%;
-}
-
+}*/
+/*
 .slide {
   width:33.33%;
   height:auto;
   float:left;
   background: linear-gradient(135deg, rgba(0,0,0,0.4),
   rgba(0,0,0,0.25));
-}
+}*/
 
-img {
+/*.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}*/
+
+/*img {
   position: relative;
   z-index:-1;
-}
+}*/
 
-.slide-window {
+/*.slide-window {
   width:100%;
   height:auto;
   overflow:hidden;
   position:relative;
-}
+}*/
 
-.nav {
-	display:block;
-	position:absolute;
-	cursor:pointer;
-  top: calc(50% - 26px);
-}
-
-.arrow {
+/*.arrow {
   opacity: 0.5;
-}
+}*/
 
-#rightNav {
+/*#rightNav {
 	right:20;
   z-index: 1;
 }
@@ -41,7 +40,7 @@ img {
 #leftNav {
 	left:20;
   z-index: 1;
-}
+}*/
 
 #internment-title {
   position: absolute;
@@ -111,13 +110,12 @@ img {
   display: none;
 }
 
-.slide-holder {
+/*.slide-holder {
   width:300%;
   background-color: blue;
   margin-left:0%;
   transition: margin-left 1s;
-/*  this is the bit that needs to change to slide the slide*/
-}
+}*/
 
 .button {
   top: 85%;
@@ -129,6 +127,7 @@ img {
   cursor: pointer;
 }
 
+/* gradient */
 section.border button {
   color: white;
   background: rgba(0,0,0,0);
@@ -137,16 +136,16 @@ section.border button {
   padding: 5px 10px 5px 10px;
 }
 
-nav {
+#navbar {
   margin: 50px;
 }
 
-ul {
+#ul-nav {
   overflow: auto;
   list-style-type: none;
 }
 
-li {
+.li-nav {
   height: 25px;
   float: left;
   margin-right: 0px;
@@ -154,7 +153,7 @@ li {
   padding: 0 20px;
 }
 
-li:last-child {
+.li-nav:last-child {
   border-right: none;
 }
 
@@ -179,3 +178,5 @@ li.active a {
   font-weight: bold;
   color: #333;
 }
+
+/* Code will be the slide show */

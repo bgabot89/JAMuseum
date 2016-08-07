@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 
   $('#leftNav').click(moveSlideLeft).click(setMarginWidth).click(SlideInfoLeft);
   $('#rightNav').click(moveSlideRight).click(setMarginWidth).click(SlideInfoRight);
@@ -58,5 +58,13 @@ function SlideInfoLeft() {
   $('#lake-title').hide();
 }
 }
+
+function testjQuery() {
+  $(".button").click(function() {
+    alert('jquery is working');
+  });
+}
+
+testjQuery();
 
 });

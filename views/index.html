@@ -1,23 +1,37 @@
 <html ng-app="myApp">
   <head>
     <link rel="stylesheet" href="/static/css/slider.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <!--Loads Angular -->
     <script src="/scripts/angular/angular.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <!-- Add jQuery library -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-touch.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
   <script src="/static/js/index.js"></script>
-    <script src="/static/js/slider.js"></script>
   </head>
   <body ng-controller="mainController">
-    <nav>
-      <ul>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Camps</a></li>
-        <li><a href="#">Stories</a></li>
+    <nav id="navbar">
+      <ul id="ul-nav">
+        <li class="active li-nav"><a href="/">Home</a></li>
+        <li class="li-nav"><a href="#">Camps</a></li>
+        <li class="li-nav"><a href="#">Stories</a></li>
       </ul>
     </nav>
-    <div ng-view>
+    <div class="container slider">
+        <img ng-repeat="slide in slides" class="slide slide-animation" ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()" ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+        <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
+        <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+    <nav class="nav">
+    <div class="wrapper">
+      <ul class="dots">
+      <li class="dot" ng-repeat="slide in slides">
+        <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}" ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+      </ul></div>
+    </nav>
     </div>
+
   </body>
 </html>
