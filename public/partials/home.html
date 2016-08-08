@@ -5,6 +5,7 @@
     <h1 ng-repeat="title in titles" ng-hide="!isCurrentSlideIndex($index)" id="{{title.id2}}">{{title.name2}}</h1>
     <a class="arrow prev" href="#" ng-click="nextSlide()"></a>
     <a class="arrow next" href="#" ng-click="prevSlide()"></a>
+    <a ng-repeat="link in links" ng-hide="!isCurrentSlideIndex($index)" class="action-button pink" id="test" href={{link.ref}}>Read More</a>
 <nav class="nav">
 <div class="wrapper">
   <ul class="dots">
