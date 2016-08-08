@@ -44,8 +44,7 @@
 
 #internment-title {
   position: absolute;
-  left: 50%;
-  top: 20%;
+  left: 55%;
   transform: translate(-50%,-50%);
   font-family: Verdana;
   font-size: 50px;
@@ -65,10 +64,10 @@
 #tule-title {
   position: absolute;
   left:10%;
+  top:-40;
   font-family: Verdana;
   font-size: 100px;
   color: #4e76f7;
-  display: none;
 }
 
 #tule-pp {
@@ -84,30 +83,28 @@
 #lake-title {
   position: absolute;
   left:11.5%;
-  top: 20%;
+  bottom: 48%;
   font-family: Verdana;
   font-size: 72px;
   color: white;
-  display:none;
 }
 
 #heart-title {
   position: absolute;
   left:10%;
+  top: -40;
   font-family: Verdana;
   font-size: 100px;
   color: #ff5134;
-  display: none;
 }
 
 #mountain-title {
   position: absolute;
   left:10.3%;
-  top: 20%;
+  top:80;
   font-family: Verdana;
   font-size: 72px;
   color: white;
-  display: none;
 }
 
 /*.slide-holder {
@@ -141,7 +138,6 @@ section.border button {
 }
 
 #ul-nav {
-  overflow: auto;
   list-style-type: none;
 }
 

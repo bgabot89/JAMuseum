@@ -24,12 +24,18 @@ app.config(function($routeProvider, $locationProvider) {
 
   // create the controller and inject Angular's $scope
   app.controller('mainController', function($scope) {
-      // create a message to display in our view
+      // creates an array of images to display on our slides
       $scope.slides = [
       { image: '/static/images/internment.png', description: 'Image 00'},
       { image: '/static/images/Tule_Lake.jpg', description: 'Image 01'},
       { image: '/static/images/Heart_Mountain.png', description: 'Image 02'}
     ];
+    //creates an array of titles for each slide
+      $scope.titles = [
+        {name: 'Life in the Internments', id: 'internment-title'},
+        {name: 'TULE', name2: 'LAKE', id: 'tule-title', id2:'lake-title'},
+        {name: 'HEART', name2: 'MOUNTAIN', id: 'heart-title', id2:'mountain-title'},
+      ];
 
     $scope.direction = 'left';
     $scope.currentIndex = 0;
