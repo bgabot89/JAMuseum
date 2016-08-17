@@ -40,7 +40,7 @@ app.config(function($routeProvider, $locationProvider) {
   app.controller('mainController', function($scope) {
       // creates an array of images to display on our slides
       $scope.slides = [
-      { image: '/static/images/internment.png', description: 'Image 00'},
+      { image: '/static/images/Internment.png', description: 'Image 00'},
       { image: '/static/images/Tule_Lake.jpg', description: 'Image 01'},
       { image: '/static/images/Heart_Mountain.png', description: 'Image 02'}
     ];
