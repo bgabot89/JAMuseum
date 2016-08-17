@@ -6,21 +6,43 @@ img {
   rgba(0,0,0,0.25));;*/
 }
 
+.action-button {
+  position: absolute;
+  left: 40%;
+  top: 80%;
+	padding: 10px 20px;
+	border-radius: 2px;
+	font-size: 20px;
+  font-family: Verdana;
+	color: #FFF;
+	text-decoration: none !important;
+}
+
+.pink {
+  background-color: #CA2A60;
+}
+
+#test:hover {
+  background-color: #A90163;
+  color: white;
+}
+
 .container {
     padding-right: 15px;
     padding-left: 15px;
     padding-top: 100px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 10px;
 }
 
 .slider {
     width: 1200px;
-    height: 400px;
+    height: 430px;
     overflow: hidden;
     position: relative;
     background: #e6e6e6;
-    border: 20px solid #FFF;
+    /*border: 2px solid black;*/
     margin-top: 20px;
 }
 
@@ -67,9 +89,9 @@ NAV
     display: block;
     position: absolute;
     z-index: 1002;
-    left: 0;
+    left: -100;
     bottom: -4px;
-    right: 0;
+    right: 80;
     height: 48px;
 }
 
@@ -127,3 +149,74 @@ NAV
     border-color: #FFF;
     background-color: transparent;
 }
+
+/*Styles for flexbox */
+  .flex-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-fox;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display : flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .flex-item {
+    background: blue;
+    padding: 20px;
+    margin: 100px;
+    border-radius: 10px;
+  }
+
+  .flex-header {
+    color: white;
+    font-family: Verdana;
+  }
+
+  .flex-info {
+    margin: 10 auto;
+    text-align: left;
+    width: 200px;
+  }
+
+  .avatar {
+    width: 150px;
+    border-radius: 20%;
+  }
+
+  figcaption {
+    color: white;
+    font-family: Verdana;
+  }
+
+  .camp-image {
+      width: 200px;
+      height: 200px;
+  }
+
+  .camp-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: -webkit-fox;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display : flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .camp-header {
+    font-family: Verdana;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .page-header {
+    text-align: center;
+    font-family: Verdana;
+  }

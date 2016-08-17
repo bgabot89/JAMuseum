@@ -14,6 +14,20 @@ app.config(function($routeProvider, $locationProvider) {
       templateUrl: '../static/partials/tule.html',
       controller: 'tuleController'
     })
+    //route for heart partial
+    .when('/heart', {
+      templateUrl: '../static/partials/heart.html',
+      controller: 'heartController'
+    })
+    .when('/camps', {
+      templateUrl: '../static/partials/camps.html',
+      controller: 'campController'
+    })
+    .when('/contact', {
+      templateUrl: '../static/partials/contact.html',
+      controller: 'contactController'
+    })
+
     //use the HTML5 History API, will remove # from url
       $locationProvider.html5Mode({
         enabled: true,
@@ -35,6 +49,11 @@ app.config(function($routeProvider, $locationProvider) {
         {name: 'Life in the Internments', id: 'internment-title'},
         {name: 'TULE', name2: 'LAKE', id: 'tule-title', id2:'lake-title'},
         {name: 'HEART', name2: 'MOUNTAIN', id: 'heart-title', id2:'mountain-title'},
+      ];
+      $scope.links = [
+        {ref: '/camps'},
+        {ref: '/tule'},
+        {ref: '/heart'}
       ];
 
     $scope.direction = 'left';
@@ -64,8 +83,58 @@ app.config(function($routeProvider, $locationProvider) {
  app.controller('tuleController', function($scope) {
 
      // create a message to display in our view
-     $scope.message = 'Something Something!';
+     $scope.message = 'Tule Lake';
  });
+
+ app.controller('heartController', function($scope) {
+
+     // create a message to display in our view
+     $scope.message = 'Heart Mountain';
+ });
+
+ //controller for contact, adding http to help with POST request
+ app.controller('contactController', function($scope, $http) {
+   //header
+   //create a blank object to hold our form information
+   // create a blank object to hold our form information
+ 			// $scope will allow this to pass between controller and view
+ 			$scope.formData = {};
+ 			// process the form
+ 			$scope.processForm = function() {
+ 				$http({
+ 			        method  : 'POST',
+ 			        url     : '../static/php/process.php',
+ 			        data    : $.param($scope.formData),  // pass in data as strings
+ 			        headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+ 			    })
+ 			        .success(function(data) {
+ 			            console.log(data);
+ 			            if (!data.success) {
+ 			            	// if not successful, bind errors to error variables
+ 			                $scope.errorName = data.errors.name;
+ 			                $scope.errorSuperhero = data.errors.superheroAlias;
+ 			            } else {
+ 			            	// if successful, bind success message to message
+ 			                $scope.message = data.message;
+                                         $scope.errorName = '';
+ 			                $scope.errorSuperhero = '';
+ 			            }
+ 			        });
+ 			};
+   });
+
+
+ app.controller('campController', function($scope) {
+
+     // create a message to display in our view
+     $scope.message = 'Camps';
+
+     $scope.camps = [
+       {name:'Tule Lake', url: '/static/images/tule_small.png', route: '/tule'},
+       {name:'Heart Mountain', url: '/static/images/heart_small.png', route: '/heart'}
+     ];
+ });
+
 
  app.animation('.slide-animation', function () {
    return {

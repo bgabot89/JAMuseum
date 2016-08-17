@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $('#leftNav').click(moveSlideLeft).click(setMarginWidth).click(SlideInfoLeft);
   $('#rightNav').click(moveSlideRight).click(setMarginWidth).click(SlideInfoRight);
-
+  
 //default slidePosition will be 0
 var slidePosition=0;
 

@@ -1,54 +1,10 @@
-/*.slider {
-  width:100%;
-}*/
-/*
-.slide {
-  width:33.33%;
-  height:auto;
-  float:left;
-  background: linear-gradient(135deg, rgba(0,0,0,0.4),
-  rgba(0,0,0,0.25));
-}*/
-
-/*.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-}*/
-
-/*img {
-  position: relative;
-  z-index:-1;
-}*/
-
-/*.slide-window {
-  width:100%;
-  height:auto;
-  overflow:hidden;
-  position:relative;
-}*/
-
-/*.arrow {
-  opacity: 0.5;
-}*/
-
-/*#rightNav {
-	right:20;
-  z-index: 1;
-}
-
-#leftNav {
-	left:20;
-  z-index: 1;
-}*/
-
 #internment-title {
   position: absolute;
   left: 55%;
   transform: translate(-50%,-50%);
   font-family: Verdana;
   font-size: 50px;
-  color: white;
+  color: black;
 }
 
 #internment-pp {
@@ -83,7 +39,7 @@
 #lake-title {
   position: absolute;
   left:11.5%;
-  bottom: 48%;
+  bottom: 50%;
   font-family: Verdana;
   font-size: 72px;
   color: white;
@@ -135,6 +91,7 @@ section.border button {
 
 #navbar {
   margin: 50px;
+  overflow: hidden;
 }
 
 #ul-nav {
@@ -175,4 +132,8 @@ li.active a {
   color: #333;
 }
 
-/* Code will be the slide show */
+.stories {
+  text-align: center;
+  font-size: 40px;
+  font-family: Verdana;
+}
